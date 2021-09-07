@@ -34,6 +34,19 @@ class HotelRepository extends ServiceEntityRepository
         $this->manager->persist($newHotel);
         $this->manager->flush();
     }
+
+    public function updateHotel(Hotel $hotel): Hotel
+    {
+        $this->manager->persist($hotel);
+        $this->manager->flush();
+
+        return $hotel;
+    }
+    public function removeHotel(Hotel $hotel)
+    {
+        $this->manager->remove($hotel);
+        $this->manager->flush();
+    }
     // /**
     //  * @return Hotel[] Returns an array of Hotel objects
     //  */
