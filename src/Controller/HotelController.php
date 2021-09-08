@@ -87,7 +87,7 @@ class HotelController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
     /**
-     * @Route("/hoteles/{id}", name="update_hotel", methods={"PUT"})
+     * @Route("/hoteles/mod/{id}", name="update_hotel", methods={"PUT"})
      */
     public function update($id, Request $request): JsonResponse
     {
